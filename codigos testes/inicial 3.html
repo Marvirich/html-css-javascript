@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+
+        <!--- icone da página-->
+        <link rel="shotcut icon" href="imagens/Blackvariant-Button-Ui-Requests-2-Sophos.ico" type="image/x-icon">   
+        <title>Inicio | BrazCity</title>
+
+        <!-- Estilos CSS e importação de fontes -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                /*background-image: url("https://wallpaperaccess.com/full/2185811.jpg");*/
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                background-color: #cccccc;
+            }
+            h1{
+                margin: 0;
+                padding: 0;
+                color: white;
+                font-family: "Staatliches";
+                font-size: 50px;
+                height: 60px;
+            }
+            span{
+                color: blue;
+            }
+            h2{
+                color:blanchedalmond;
+                text-align: center;
+            }
+            .paragrafos{
+                background-color: #40e0d06c;
+                text-align: justify;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bold;
+                width: 80%;
+                color: black;
+                margin: 10px auto;
+                padding: 10px;
+                text-indent: 40px;
+                border-radius: 20px;
+            }
+            header{
+                background-image: linear-gradient(to bottom, #69dad4,#2658c5,rgb(9, 0, 128));
+                text-shadow: 10px 10px 10px black;
+            }
+            footer{
+                background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcfkObXq7P3ZSSTOSbvT62FKDh_ct2YsDgbw&usqp=CAU");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100px;
+                margin: auto;
+            }
+            footer p {
+                text-align: center;
+            }
+            .topo{
+                width: 100%;
+            }
+            .alinhar{
+                text-align: justify;
+                margin: auto;
+                padding: 5px;
+            }
+            .link{
+                text-decoration: none;
+                color: black;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                padding: 10px;
+            }
+            .menu{
+                width: 100%;
+                height: 50px;
+                font-family: 'Arial';
+                background-color: blue;
+            }
+            .menu ul{
+                list-style: none;
+                position: relative;
+            }
+            .menu ul li{
+                width: 200px;
+                float: left;
+            }
+            .menu a{
+                padding: 15px;
+                display: block;
+                color: white;
+                text-decoration: none;
+                background-color: blue;
+                text-align: center;
+            }
+            .menu ul ul{
+                position: absolute;
+                visibility: hidden;
+            }
+            .menu ul li:hover ul{
+                visibility: visible;
+            }
+            .menu a:hover{
+                background-color: rgb(47, 179, 255);
+                color: white;
+            }
+            .menu ul ul li{
+                float: none;
+                border-bottom: solid 1px activecaption;
+            }
+            .menu ul ul li a{
+                background-color: rgb(89, 247, 199);
+                color: black;
+            }
+            label[for='bt_menu']{
+                padding: 5px;
+                background-color: blue;
+                color: white;
+                font-family: 'Arial';
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+            }
+            #bt_menu{
+                display: none;
+            }
+            label{
+                display: none;
+            }
+            @media(max-width: 800px){ 
+                label[for = "bt_menu"]{
+                    display: block;
+                }
+                #bt_menu:checked ~ .menu{
+                    margin: 0;
+                }
+                .menu{
+                    margin: 5px;
+                    margin-left: -100%;
+                    transition: all .4s;
+                }
+                
+                .menu ul li{
+                    width: 100%;
+                    float: none;                 
+                } 
+                .menu ul ul{
+                    position: static;
+                    overflow: hidden;
+                    max-height: 0;
+                    transition: all .4s;
+                }
+                .menu ul li:hover ul{
+                    height: auto;
+                    max-height: 200px;
+                }
+            }       
+        </style>
+    </head>
+    <body>
+        <!--- Imagem -->
+        <div>
+            <img class="topo" src="../imagens/brazcity.png" alt="logo" height="150"> 
+        </div>
+        
+        <header>
+            <h1><strong><em>BRAZ<span>CITY</em></strong></span></h1>
+            <br>
+            <!--<img src="http://www.agenciabrasilia.df.gov.br/wp-conteudo/uploads/2021/02/WhatsApp-Image-2021-02-09-at-12.47.39-2.jpeg" alt="MDN logo" width="300" height="200">-->
+        </header>
+
+        <!--- Menu -->  
+        <input type="checkbox"id ="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+        
+        
+        <div class = "menu">
+            <ul>
+                <li><a href="#">Restautantes</a>
+                    <ul>
+                        <li><a href="#">Restautantes 1</a></li>
+                        <li><a href="#">Restautantes 2</a></li>
+                        <li><a href="#">Restautantes 3</a></li>
+                    </ul>
+                </li>  
+                <li><a href="#">Quiosques</a>
+                    <ul>
+                        <li><a href="#">Quiosques 1</a></li>
+                        <li><a href="#">Quiosques 2</a></li>
+                        <li><a href="#">Quiosques 3</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Roupas</a>
+               
+                    <ul>
+                        <li><a href="#">Roupas 1</a></li>
+                        <li><a href="#">Roupas 2</a></li>
+                        <li><a href="#">Roupas 3</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Mercados</a> 
+                    <ul>
+                        <li><a href="#">Mercados 1</a></li>
+                        <li><a href="#">Mercados 2</a></li>
+                        <li><a href="#">Mercados 3</a></li>
+                    </ul>
+                </li>
+                   
+                <li><a href="#">Lanches</a>
+                    <ul>
+                        <li><a href="#">Lanches 1</a></li>
+                        <li><a href="#">Lanches 2</a></li>
+                        <li><a href="#">Lanches 3</a></li>
+                    </ul>  
+                </li>
+ 
+                <li><a href="#">Eletronicos</a>
+                    <ul>
+                        <li><a href="#">Eletronicos 1</a></li>
+                        <li><a href="#">Eletronicos 2</a></li>
+                        <li><a href="#">Eletronicos 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!--- Paragrafo e Titulo nível-->
+        <div class="paragrafos">
+            <h2><strong>Brazlândia</strong></h2>
+            <br><p>Brazlândia é, no Distrito Federal,<s> a cidade mais distante de Brasília</s>, a 59 quilômetros do Plano Piloto. Por acaso, ou não, é também a que mais se diferencia do dia-a-dia da Capital Federal. Com um ritmo de vida interiorana e economia baseada na produção agrícola, tem história bem mais antiga do que a maioria das outras regiões administrativas do DF. Cheia de famosos nomes de famílias e pioneiros com histórias de épocas distantes. Hoje, Brazlândia é marcado por ambientes bucólicos, cachoeiras e bate-papo à beira do Lago Veredinha. Tem também grande potencial turístico, sendo muito procurado por suas festas agrícolas, como a do Morango ou a do Leite, e religiosas, caso da Festa do Divino ou o Encontro da Mãe com o Filho.</p>
+            <br><p>Tanto a tradição agrícola quanto a religiosa tem raízes no começo do século 20, quando quatro famílias goianas e mineiras aportaram nas terras da chapada do Vão dos Angicos. Foram os Abreu de Lima, os Rodrigues do Prado, os Cardoso de Oliveira e os Braz de Lima, os Rodrigues do Prado, os Cardoso de Oliveira e os Braz quem povoaram a terra que futuramente seria Brazlândia.</p>   
+            <br><p>O desenvolvimento foi trazido, principalmente, pelos Braz, de Carmo do Paranaíba, em Minas, e pelos Cardoso de Oliveira, de Posse, em Goiás, que já tinham tradição como agricultores e pecuaristas. Os dois clãs logo estabeleceram relação familiar e de negócios, realizando atividades agras pastorais nas três décadas seguintes.</p> 
+            <br><p>No início dos anos 30, as famílias conseguiram, por influência política, que o povoado fosse elevado à categoria de distrito de Santa Luiza (hoje Luziânia). Tanto os Braz quanto os Cardoso de Oliveira tinham negócios na cidade goiana. Foi quando o lugar recebeu o nome de Brazlândia, em homenagem à família mais numerosa da região. O decreto criando o distrito é de 15 de abril de 1932, sendo a data mais significativa para a cidade. Mesmo assim, o aniversário é comemorado em 5 de junho, porque foi nessa data, em 1933, que foi criada a subprefeitura de Brazlândia.</p>
+            <br>
+        </div>
+ 
+        <!--- Video do Youtube 
+        <iframe width="500" height="250" 
+            src="https://www.youtube.com/embed/BrRgaP3Owro?controls=0">
+        </iframe>-->
+    
+        <!-- Tentativa de colocar audio
+        <audio controls>
+            <source src="../music/GHOSTEMANE - Nihil(MP3_128K).mp3" type="audio/mpeg">
+        </audio>-->
+
+        <!--- Rodapé -->
+        <footer class="alinhar"> 
+                <div >
+                    <p><a href="mailto:marcos@example.com" target="_blank" class="link">
+                        <span class="link"><img src="https://cdn-icons-png.flaticon.com/512/95/95627.png" alt="" width="30" height="30">E-mail  </span>
+                    </a></p>
+                    <p><a href="https://wa.me/5561998105196" target="_blank" class="link">
+                        <span class="link"><img src="https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2020/04/WhatsApp-%C3%8Dcone-Preto-PNG.png" alt="" width="30" height="30"> WhatsApp</span>
+                    </a></p>
+                    <p class="link"><strong>© Copyright 2021 Copyright.com.br - All Rights Reserved</strong></p>
+                </div >              
+        </footer> 
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shotcut icon" href="imagens/Blackvariant-Button-Ui-Requests-2-Sophos.ico" type="image/x-icon">   
+        <title>Inicio | Braz City</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Staatliches&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                background-color: grey;
+             }
+             #minhaDiv {
+                background: -webkit-gradient(linear, left top, right top, from(#CCCCCC), to(#000000)) no-repeat;
+                background: -moz-linear-gradient(left, #CCCCCC, #000000);
+                filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#CCCCCC', EndColorStr='#000000');            
+            }
+            img{
+                width: 100%;
+            }
+            h1{
+                margin: 0;
+                padding: 0;
+                background-color: grey;
+                color: white;
+                font-family: 'Times New Roman', Times, serif;
+                
+            }
+            h2{
+                background-color: grey;
+                color: white;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .menu{
+                width: 100%;
+                height: 60px;
+                background-color: grey;
+                font-family: 'Arial';
+            }
+            .menu ul{
+                list-style: none;
+                position: relative;
+            }
+            .menu ul li{
+                width: 150px;
+                float: left;
+            }
+            .menu a{
+                padding: 15px;
+                display: block;
+                color: white;
+                text-decoration: none;
+                background-color: black;
+                text-align: center;
+            }
+            .menu ul ul{
+                position: absolute;
+                visibility: hidden;
+            }
+            .menu ul li:hover ul{
+                visibility: visible;
+            }
+            .menu a:hover{
+                background-color: gray;
+                color: white;
+            }
+            .menu ul ul li{
+                float: none;
+                border-bottom: solid 1px activecaption;
+            }
+            .menu ul ul li a{
+                background-color: gray;
+                color: black;
+            }
+            label[for='bt_menu']{
+                padding: 5px;
+                background-color: black;
+                color: white;
+                font-family: 'Arial';
+                text-align: center;
+                font-size: 30px;
+                cursor: pointer;
+                width: 50px;
+                height: 50px;
+            }
+            #bt_menu{
+                display: none;
+            }
+            label{
+                display: none;
+            }
+        @media(max-width: 800px){ 
+            label[for = "bt_menu"]{
+                display: block;
+            }
+            #bt_menu:checked ~ .menu{
+                margin: 0;
+            }
+            .menu{
+                margin: 5px;
+                margin-left: -100%;
+                transition: all .4s;
+            }
+            .menu ul li{
+                width: 100%;
+                float: none;                 
+            } 
+            .menu ul ul{
+                position: static;
+                overflow: hidden;
+                max-height: 0;
+                transition: all .4s;
+            }
+            .menu ul li:hover ul{
+                height: auto;
+                max-height: 200px;
+            }
+        }       
+        </style>
+    </head>
+    <body>
+        <img  src="imagens/brazcity.png" alt="logo">
+     
+        <h1><br><strong><em>BRAZ<font color="Blue">CITY</em></strong></font></h1>
+        <h2><br>Lojas de Brazlândia em suas mãos!<br></h2>
+            
+        <input type="checkbox"id ="bt_menu">
+        <label for="bt_menu">&#9776;</label>
+
+        <div class="sidebar close">
+            <div class="logo-details">
+              <i class='bx bxl-c-plus-plus'></i>
+              <span class="logo_name">HOME</span>
+            </div>
+            <ul class="nav-links">
+              <li>
+                <a href="#">
+                  <i class='bx bx-grid-alt' ></i>
+                  <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">Category</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bx-collection' ></i>
+                    <span class="link_name">Category</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a class="link_name" href="#">Category</a></li>
+                  <li><a href="#">HTML & CSS</a></li>
+                  <li><a href="#">JavaScript</a></li>
+                  <li><a href="#">PHP & MySQL</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bx-book-alt' ></i>
+                    <span class="link_name">Posts</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a class="link_name" href="#">Posts</a></li>
+                  <li><a href="#">Web Design</a></li>
+                  <li><a href="#">Login Form</a></li>
+                  <li><a href="#">Card Design</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-pie-chart-alt-2' ></i>
+                  <span class="link_name">Analytics</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">Analytics</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-line-chart' ></i>
+                  <span class="link_name">Chart</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">Chart</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="iocn-link">
+                  <a href="#">
+                    <i class='bx bx-plug' ></i>
+                    <span class="link_name">Plugins</span>
+                  </a>
+                  <i class='bx bxs-chevron-down arrow' ></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a class="link_name" href="#">Plugins</a></li>
+                  <li><a href="#">UI Face</a></li>
+                  <li><a href="#">Pigments</a></li>
+                  <li><a href="#">Box Icons</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-compass' ></i>
+                  <span class="link_name">Explore</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">Explore</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-history'></i>
+                  <span class="link_name">History</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">History</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='bx bx-cog' ></i>
+                  <span class="link_name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                  <li><a class="link_name" href="#">Setting</a></li>
+                </ul>
+              </li>
+              <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <!--<img src="image/profile.jpg" alt="profileImg">-->
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Prem Shahi</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <i class='bx bx-log-out' ></i>
+            </div>
+        
+        <center>
+            <iframe width="500" height="250" 
+                src="https://www.youtube.com/embed/BrRgaP3Owro?controls=0">
+            </iframe>
+        </center>
+        <center>
+            <footer>
+                <p>© Copyright 2021 Copyright.com.br - All Rights Reserved</p>
+                <p><a href="mailto:marcos@example.com">marcos@example.com</a></p>
+            </footer> 
+        </center>
+    </body>
+</html>

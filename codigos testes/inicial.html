@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+    <meta charset="UTF-8"/>
+        <title>BRAZ CITY</title>
+        <link href="css.css" rel="stylesheet" type="text/css" />
+        <style>
+            *{margin: 0; padding: 0;}
+            nav {
+                margin: 27px auto 0;
+
+                position: relative;
+                width: 590px;
+                height: 50px;
+                background-color: #34495e;
+                border-radius: 8px;
+                font-size: 0;
+            }
+            nav a {
+                line-height: 50px;
+                height: 100%;
+                font-size: 15px;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+            }
+            nav .animation {
+                position: absolute;
+                height: 100%;
+                top: 0;
+                z-index: 0;
+                transition: all .5s ease 0s;
+                border-radius: 8px;
+            }
+            a:nth-child(1) {
+                width: 100px;
+            }
+            a:nth-child(2) {
+                width: 110px;
+            }
+            a:nth-child(3) {
+                width: 100px;
+            }
+            a:nth-child(4) {
+                width: 160px;
+            }
+            a:nth-child(5) {
+                width: 120px;
+            }
+            nav .start-home, a:nth-child(1):hover~.animation {
+                width: 100px;
+                left: 0;
+                background-color: #1abc9c;
+            }
+            nav .start-about, a:nth-child(2):hover~.animation {
+                width: 110px;
+                left: 100px;
+                background-color: #e74c3c;
+            }
+            nav .start-blog, a:nth-child(3):hover~.animation {
+                width: 100px;
+                left: 210px;
+                background-color: #3498db;
+            }
+            nav .start-portefolio, a:nth-child(4):hover~.animation {
+                width: 160px;
+                left: 310px;
+                background-color: #9b59b6;
+            }
+            nav .start-contact, a:nth-child(5):hover~.animation {
+                width: 120px;
+                left: 470px;
+                background-color: #e67e22;
+            }
+
+            body {
+                font-size: 12px;
+                font-family: sans-serif;
+            }
+            h1 {
+                text-align: left;
+                margin: 40px 0 40px;
+                text-align: left;
+                font-size: 30px;
+                color: #ecf0f1;
+                text-shadow: 2px 2px 4px #000000;
+                font-family: 'Cherry Swash', cursive;
+                background-color: #34495e ;
+            }
+            h2{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 40px;
+            }
+            p {
+                position: absolute;
+                bottom: 20px;
+                width: 100%;
+                text-align: center;
+                color: #ecf0f1;
+                font-family: 'Cherry Swash',cursive;
+                font-size: 16px;
+            }
+
+            span {
+                color: #2BD6B4;
+            }
+            body{
+                background-color: rgba(128, 128, 128, 0.699);
+            }
+            fieldset{
+                background-color:#34495e;
+            }
+            label{
+                color:white;
+            }
+            legend{
+                color: white;
+                font-size: 25px;
+               
+            }
+        </style>
+    </head>
+    <body>
+    
+    <center>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfajJseMhYlJzHzcSjWd8SSSI_MW_hafayQQ&usqp=CAU"    
+    </center>
+    <h1>BRAZ CITY</h1>
+    <nav>
+        <a href="https://www.brazlandia.df.gov.br/category/sobre-a-ra/conheca-a-ra/">Home</a>
+        <a href="https://portaldebrazlandia.com.br/historia-de-brazlandia/">About</a>
+        <a href="https://www.metropoles.com/tag/brazlandia">Blog</a>
+        <a href="https://www.google.com/search?q=imagens+de+brazlandia&client=firefox-b-d&channel=nrow5&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiN-M-02KX0AhU5ppUCHTmoAkcQ_AUoAXoECAEQAw&biw=687&bih=653&dpr=1">Portifolio</a>
+        <a href="https://www.brazlandia.df.gov.br/category/sobre-a-ra/informacoes/">Contact</a>
+        <div class="animation start-home"></div>
+    </nav>
+
+    <h2> <br/> Cadastre Agora <br/></h2>
+    <form action="Script_do_Formulario.php" method="post">
+
+    <!-- DADOS PESSOAIS-->
+    <fieldset>
+     <legend>Dados Pessoais</legend>
+     <table cellspacing="10">
+      <tr>
+       <td>
+        <label for="nome">Nome: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="email">
+       </td>
+       <td>
+        <label for="sobrenome">Sobrenome: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="sobrenome">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label>Nascimento: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
+       <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
+       <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="rg">RG: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="rg" size="13" maxlength="13"> 
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label>CPF:</label>
+       </td>
+       <td align="left">
+        <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+       </td>
+      </tr>
+     </table>
+    </fieldset>
+    
+    <br />
+    <!-- ENDEREÇO -->
+    <fieldset>
+     <legend>Dados de Endereço</legend>
+     <table cellspacing="10">
+    
+      <tr>
+       <td>
+        <label for="rua">Rua:</label>
+       </td>
+       <td align="left">
+        <input type="text" name="rua">
+       </td>
+       <td>
+        <label for="numero">Numero:</label>
+       </td>
+       <td align="left">
+        <input type="text" name="numero" size="4">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="bairro">Bairro: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="bairro">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="estado">Estado:</label>
+       </td>
+       <td align="left">
+        <select name="estado"> 
+        <option value="ac">Acre</option> 
+        <option value="al">Alagoas</option> 
+        <option value="am">Amazonas</option> 
+        <option value="ap">Amapá</option> 
+        <option value="ba">Bahia</option> 
+        <option value="ce">Ceará</option> 
+        <option value="df">Distrito Federal</option> 
+        <option value="es">Espírito Santo</option> 
+        <option value="go">Goiás</option> 
+        <option value="ma">Maranhão</option> 
+        <option value="mt">Mato Grosso</option> 
+        <option value="ms">Mato Grosso do Sul</option> 
+        <option value="mg">Minas Gerais</option> 
+        <option value="pa">Pará</option> 
+        <option value="pb">Paraíba</option> 
+        <option value="pr">Paraná</option> 
+        <option value="pe">Pernambuco</option> 
+        <option value="pi">Piauí</option> 
+        <option value="rj">Rio de Janeiro</option> 
+        <option value="rn">Rio Grande do Norte</option> 
+        <option value="ro">Rondônia</option> 
+        <option value="rs">Rio Grande do Sul</option> 
+        <option value="rr">Roraima</option> 
+        <option value="sc">Santa Catarina</option> 
+        <option value="se">Sergipe</option> 
+        <option value="sp">São Paulo</option> 
+        <option value="to">Tocantins</option> 
+       </select>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="cidade">Cidade: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="cidade">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="cep">CEP: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+       </td>
+      </tr>
+     </table>
+    </fieldset>
+    <br />
+    
+    <!-- DADOS DE LOGIN -->
+    <fieldset>
+     <legend>Dados de login</legend>
+     <table cellspacing="10">
+      <tr>
+       <td>
+        <label for="email">E-mail: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="email">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="imagem">Imagem de perfil:</label>
+       </td>
+       <td>
+        <input type="file" name="imagem" >
+    
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="login">Login de usuário: </label>
+       </td>
+       <td align="left">
+        <input type="text" name="login">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="pass">Senha: </label>
+       </td>
+       <td align="left">
+        <input type="password" name="pass">
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <label for="passconfirm">Confirme a senha: </label>
+       </td>
+       <td align="left">
+        <input type="password" name="passconfirm">
+       </td>
+      </tr>
+     </table>
+    </fieldset>
+    <br />
+    <input type="submit">
+    <input type="reset" value="Limpar">
+    </form>
+    
+    </body>
+</html>
